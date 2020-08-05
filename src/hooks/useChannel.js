@@ -10,7 +10,7 @@ const useChannel = (channelTopic, reducer, initialState) => {
     joinChannel(socket, channelTopic, dispatch, setBroadcast)
   ), [channelTopic])
 
-  return [state, broadcast]
+  return [state, broadcast, dispatch]
 }
 
 const joinChannel = (socket, channelTopic, dispatch, setBroadcast) => {
